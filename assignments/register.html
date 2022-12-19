@@ -23,103 +23,92 @@
 <br>
 <center><h2 style="color:blue;">REGISTER NOW FOR INDIA'S LARGEST TECHFEST</h2>
 <hr>
-<form>
-<form>
+<form name="anokha" onsubmit="return myFunc();">
 <table width="50%">
 <tr>
 <td><h4 style="font-family:arial;">Event:</h4></td>
-<td> <select id="events" name="events">
-	<option value="hackathon">Select</option>
-    <option value="hackathon">HACKATHON</option>
-    <option value="codeking">CODE MASTER</option>
-    <option value="techquiz">TECH QUIZ</option>
-    <option value="CTF">CTF</option>
-  </select>
+<td> <select id="events" name="events" style="border-color:black">
+	<option value="Select">Select</option>
+    <option value="Cozmo Clunch">Cozmo Clunch</option>
+    <option value="Game of Codes">Game of Codes</option>
+    <option value="Rural Digital Payment Challenge">Rural Digital Payment Challenge</option>
+    <option value="API Generate-a-thon">API Generate-a-thon</option>
+	<option value="International Micromouse Challenge">International Micromouse Challenge</option>
+    <option value="Rowboatics">Rowboatics</option>
+</select>
 </td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Candidate's Name:</h4></td>
-<td> <input type= "text" id="name" size="30" placeholder="Enter your Name" style="border-color:black" required></td>
+<td> <input type= "text" id="name" name="name" size="30" placeholder="Enter your Name" style="border-color:black" required></td>
 </tr>
 <tr>
 <td> 
 <h4 label for="dob" style="font-family:arial;">DOB:</label></h4></td>
-<td><input type="date" id="dob"></td>
+<td><input type="date" id="dob" name="dob" value="" style="border-color:black"  style="font-family:arial;" required></td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Age:</h4> </td>
-<td> <input type= "text" id="age" size="30" style="border-color:black" required></td>
+<td> <input type= "text" id="age" name="age" min="18" max="30" size="30" style="border-color:black" required></td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Age Proof:</h4> </td>
-<td> <input type="file" id="ageproof" style="border-color:black" required></td>
+<td> <input type="file" id="ageproof" name="ageproof" style="border-color:black" required></td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Gender:</h4> </td>
-<td> <input type= "radio" id="gender" value="m" required> Male
+<td> <input type= "radio" id="gender" name="gender" value="m" required> Male
 <input type= "radio" id="gender" value="f" required> Female
 <input type= "radio" id="gender" value="o" required> Others </td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">College Name:</h4> </td>
-<td> <input type= "text" id="cname" size="30" style="border-color:black" required></td>
+<td> <input type= "text" id="cname" name="cname" size="30" style="border-color:black" required></td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">College City:</h4> </td>
-<td> <input type= "text" id="ccity" size="30" style="border-color:black" required></td>
+<td> <input type= "text" id="ccity" name="ccity" size="30" style="border-color:black" required></td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Email:</h4> </td>
-<td> <input type= "mail" id="email" size="30" style="border-color:black" required></td>
+<td> <input type="email" id="email" name="email" size="30" style="border-color:black" required></td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Mob No:</h4> </td>
-<td> <input type= "number" id="number" size="30" style="border-color:black" required></td>
+<td> <input type= "tel" id="num" name="num" value="" size="30" style="border-color:black" required></td>
+<span id="lblError" class="error"></span>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Father's Name:</h4></td>
-<td> <input type= "text" id="fname" size="30" style="border-color:black" required></td>
+<td> <input type= "text" id="fname"name="fname" size="30" style="border-color:black" required></td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Address:</h4></td>
-<td> <textarea id="address" name="address" rows="4" cols="50"></textarea></td>
-</tr>
-<tr>
-<td><h4 style="font-family:arial;">Emergency contact Name:</h4></td>
-<td> <input type= "text" id="ecname" size="30" style="border-color:black" required></td>
+<td> <textarea id="address" name="address" rows="4" cols="50" style="border-color:black" required></textarea></td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Emergency contact Mob No:</h4> </td>
-<td> <input type= "number" id="enumber" size="30" style="border-color:black" required></td>
+<td> <input type= "text" id="eenum" name="eenum" value="" size="30" style="border-color:black" required></td>
+<span id="lblError" class="error"></span>
+</tr>
+<tr>
+<td><h4 style="font-family:arial;">Password:</h4></td>
+<td> <input type= "password" id="pswd" name="pswd" value="" size="30" style="border-color:black" required></td>
+</tr>
+<tr>
+<td><h4 style="font-family:arial;">Confirm Password:</h4></td>
+<td> <input type= "password" id="pass" name="pass"  value="" size="30" style="border-color:black" required></td>
 </tr>
 <tr>
 <td> <h4 style="font-family:arial;">By clicking Register you are accepting our guidlines for the respective event</h4> </td>
-<td><input type="checkbox" checked="checked" id="tac" style="border-color:black"></td>
+<td><input type="checkbox"  id="chk" name="chk" value="" style="border-color:black" required></td>
 </tr>
 <tr>
-<td> <button onclick="myFunction()">SUBMIT</button></td> 
-<div id="suc"></div>
+<td> <button type="submit" value="Submit">SUBMIT</button></td> 
 </tr>
 </table>
 </form>
 
-
-
-<script>
-function myFunction() {
-	alert("By clicking Ok your are Registered for the event");
-}	
-</script>
-
-<script>
-   var a;
-   a= document.getElementById("name").value;
-   console.log("your name ="+a);
-   var b;
-   b= document.getElementById("events").value;
-   console.log("Registered event ="+b);
-   
-</script>
 
 
 <br>
@@ -127,9 +116,129 @@ function myFunction() {
 <br>
 <br>
 <footer style="background-color:purple;">
+<br>
 <center><b style="color:rgb(238, 255, 0);font-family:arial;">© Anokha ICTS Amrita</b></center>
 <center><h4 style="color:rgb(238, 255, 0);font-family:arial;">All Rights Reserved</h4></center>
+<br>
 </footer>
+
+<script>
+function myFunc() {
+	var events = document.anokha.events.value;
+    var name = document.anokha.name.value;
+	var dob = document.anokha.dob.value;
+	var age = document.anokha.age.value;
+	var ageproof = document.anokha.ageproof.value;
+    var gen = document.anokha.gender.value;
+    var cname = document.anokha.cname.value;
+	var ccity = document.anokha.ccity.value;
+	var mail = document.anokha.email.value;
+	var num = document.anokha.num.value;
+	var fname = document.anokha.fname.value;
+	var address = document.anokha.address.value;
+	var eenum = document.anokha.eenum.value;
+    var pass = document.anokha.pswd.value;
+    var cpass = document.anokha.pass.value;
+    var chk = document.anokha.chk.value;
+
+    var letters = /^[A-Za-z]+$/;
+    var tele = /^[0-9]+$/;
+
+	if (events == 'Select') {
+        alert('please select any event you wish to register');
+        return false;
+    }
+	
+	else if (name.length < 3 || name.length > 20) {
+        alert("username should contain 4-20 letters");
+        return false;
+    }
+	
+	/*else if (age.value < 18 || age.value > 35) {
+        alert("age limit is 18-35");
+        return false;
+    }*/
+
+    else if (gen == '' || gen == null) {
+        alert('Gender is not filled');
+        return false;
+    }
+
+	else if (cname.length < 3 || cname.length > 40) {
+        alert("college name should contain 4-40 letters");
+        return false;
+    }
+
+	else if (ccity.length < 3 || ccity.length > 20) {
+        alert("college city name should contain 4-20 letters");
+        return false;
+    }
+
+	else if (fname.length < 3 || fname.length > 20) {
+        alert("Father name should contain 4-20 letters");
+        return false;
+    }
+	
+    else if (pass.length < 8 || pass.length > 24) {
+        alert('password should contain 8-24 characters');
+        return false;
+    }
+
+    else if (pass != cpass) {
+        alert('confirm password is not same as entered password');
+        return false;
+    }
+
+    else if(num.length<5 || num.length>10){
+        alert('Enter valid phone number.');
+        return false;
+    }
+	
+	else if(eenum.length<5 || eenum.length>10){
+        alert('Enter valid emergency phone number.');
+        return false;
+    }
+	
+    else {
+        if(name.match(letters)) {
+            if(num.match(tele)) {
+                alert('success');
+                return true;
+            }
+            else{
+                alert('phone number invalid');
+                return false;
+            }
+        }
+        else{
+            alert('Enter valid name');
+            return false;
+        }
+    }
+    
+	/*else{
+        if(fname.match(letters)) {
+            if(eenum.match(tele)) {
+                alert('success');
+                return true;
+            }
+            else{
+                alert('phone number invalid');
+                return false;
+            }
+        }
+        else{
+            alert('Enter valid Fathers name');
+            return false;
+        }
+    }*/
+}
+
+
+
+</script>
+
+
 
 </body>
 </html>
