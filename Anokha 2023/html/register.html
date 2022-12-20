@@ -56,7 +56,7 @@
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Age:</h4> </td>
-<td> <input type= "text" id="age" name="age" min="18" max="30" size="30" style="border-color:black" required></td>
+<td> <input type= "text" id="age" name="age" min="18" max="35" size="30" style="border-color:black" required></td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">Age Proof:</h4> </td>
@@ -65,8 +65,8 @@
 <tr>
 <td><h4 style="font-family:arial;">Gender:</h4> </td>
 <td> <input type= "radio" id="gender" name="gender" value="m" required> Male
-<input type= "radio" id="gender" value="f" required> Female
-<input type= "radio" id="gender" value="o" required> Others </td>
+<input type= "radio" id="gender" name="gender" value="f" required> Female
+<input type= "radio" id="gender" name="gender" value="o" required> Others </td>
 </tr>
 <tr>
 <td><h4 style="font-family:arial;">College Name:</h4> </td>
@@ -111,7 +111,7 @@
 <td><input type="checkbox"  id="chk" name="chk" value="" style="border-color:black" required></td>
 </tr>
 <tr>
-<td> <button type="submit" value="Submit">REGISTER</button></td> 
+<td> <button type="submit" value="Submit" width="25%">REGISTER</button></td> 
 </tr>
 </table>
 </form>
@@ -132,21 +132,20 @@
 <script>
 function myFunc() {
 	var events = document.anokha.events.value;
-    var name = document.anokha.name.value;
+    	var name = document.anokha.name.value;
 	var dob = document.anokha.dob.value;
 	var age = document.anokha.age.value;
-	var ageproof = document.anokha.ageproof.value;
-    var gen = document.anokha.gender.value;
-    var cname = document.anokha.cname.value;
+	var gen = document.anokha.gender.value;
+    	var cname = document.anokha.cname.value;
 	var ccity = document.anokha.ccity.value;
 	var mail = document.anokha.email.value;
 	var num = document.anokha.num.value;
 	var fname = document.anokha.fname.value;
 	var address = document.anokha.address.value;
 	var eenum = document.anokha.eenum.value;
-    var pass = document.anokha.pswd.value;
-    var cpass = document.anokha.pass.value;
-    var chk = document.anokha.chk.value;
+    	var pass = document.anokha.pswd.value;
+    	var cpass = document.anokha.pass.value;
+    	var chk = document.anokha.chk.value;
 
     var letters = /^[A-Za-z]+$/;
     var tele = /^[0-9]+$/;
@@ -161,10 +160,10 @@ function myFunc() {
         return false;
     }
 	
-	/*else if (age.value < 18 || age.value > 35) {
+	else if (age < 18 || age > 35) {
         alert("age limit is 18-35");
         return false;
-    }*/
+    }
 
     else if (gen == '' || gen == null) {
         alert('Gender is not filled');
